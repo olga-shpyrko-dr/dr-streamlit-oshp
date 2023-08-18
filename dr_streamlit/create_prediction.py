@@ -39,7 +39,7 @@ def get_prediction_features(project_id: str, deployment_id: str) -> List[Dict[st
               'min': 0,
               'max': 0,
               'median': 0,
-              'suspected_int': False}
+              'suspected_int': True}
             prediction_features.append(record)
 
     return prediction_features
