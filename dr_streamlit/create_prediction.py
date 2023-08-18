@@ -64,7 +64,8 @@ def create_prediction_form(
                     pred[f['name']] = st.number_input(
                         f['name'],
                         value=int(f['median']) if f['suspected_int'] else float(f['median']),
-                        step=1 if f['suspected_int'] else 0.01
+                        step=1 if f['suspected_int'] else 0.01,
+                        key = str(f['name'])+"-"+str(index)
                     )
                 elif f['feature_type'] == "Categorical":
                     pred[f['name']] = st.selectbox(f['name'], options=f['options'])
