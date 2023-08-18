@@ -107,7 +107,7 @@ def main():
     try:
         c = Client(
             token=os.getenv("token"),
-            endpoint=os.getenv('endpoint', 'https://app.datarobot.com/api/v2/')
+            endpoint=os.getenv('endpoint', 'https://app.eu.datarobot.com/api/v2/')
         )
         set_client(c)
     except ValueError as e:
