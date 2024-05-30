@@ -10,7 +10,10 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt requirements.txt
+COPY streamlit_wordcloud-0.1.0-py3-none-any.whl streamlit_wordcloud-0.1.0-py3-none-any.whl
+RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
+RUN pip3 install streamlit_wordcloud-0.1.0-py3-none-any.whl
 
 COPY . .
 
