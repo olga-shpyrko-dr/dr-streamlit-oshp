@@ -7,7 +7,7 @@ from dr_streamlit import multiclass_dropdown_menu, derived_features_chart, text_
 if __name__ == '__main__':
     c = Client(
         token=os.getenv("token"),
-        endpoint=os.getenv('endpoint', 'https://app.datarobot.com/api/v2/')
+        endpoint=os.getenv('endpoint', 'https://app.eu.datarobot.com/api/v2/')
     )
     set_client(c)
 
